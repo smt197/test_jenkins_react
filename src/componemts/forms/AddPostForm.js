@@ -14,7 +14,7 @@ const AddPostForm = ({ tableName }) => {
     setMessage("");
 
     try {
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from(tableName)
         .insert([{ title, description, position }]);
 
